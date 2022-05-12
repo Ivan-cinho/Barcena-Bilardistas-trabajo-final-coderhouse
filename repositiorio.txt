@@ -1,0 +1,4 @@
+
+repositirio y otras weas
+
+git remote add origin https://github.com/Ivan-cinho/trabajo-final.git
