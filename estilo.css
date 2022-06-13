@@ -1,0 +1,699 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none !important;
+}
+
+/* fuentes */
+/* variables*/
+BODY {
+  background-image: url(imagenes/fondo4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Amatic SC", cursive;
+}
+
+/*header */
+.navbar {
+  border-bottom: 2px solid black;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+  margin-right: 50px;
+}
+
+.navbar-brand {
+  background-image: url(imagenes/logo.png);
+  background-size: cover;
+  background-position: center;
+  margin-left: 2%;
+  height: 70px;
+  width: 70px;
+  transition: all 0.5s;
+}
+.navbar-brand:hover {
+  transform: scale(0.97);
+  transition: all 0.5s;
+}
+
+.nav-link {
+  font-size: x-large;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+}
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.bg-light {
+  --bs-bg-opacity: 0 ;
+}
+
+@media only screen and (max-width: 426px) {
+  .navbar-brand {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* main */
+/* banner de noticias */
+.contenedor-banner {
+  display: flex;
+  width: 70vw;
+  height: 500px;
+  margin: 3rem auto 3rem auto;
+  background-image: url(imagenes/imagen4.jpg);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-bottom: 2px rgba(0, 0, 0, 0.75) solid;
+}
+.contenedor-banner .contenedor-banner_descripcion {
+  width: 70%;
+  align-items: center;
+}
+.contenedor-banner .contenedor-banner_descripcion h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 8%;
+}
+.contenedor-banner .contenedor-banner_descripcion p {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.75);
+  width: 70%;
+}
+.contenedor-banner .contenedor-banner_descripcion a {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.75);
+  border: 2px rgba(0, 0, 0, 0.75) solid;
+  padding: 0 1%;
+  transition: 0.7s;
+}
+.contenedor-banner .contenedor-banner_descripcion a:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #f2f2f2;
+  transition: 0.7S;
+}
+
+/* los @media intente anidarlos dentro del codigo de cada seccion pero no logre que me lo tome, tampoco estoy seguro de que sea la forma correcta */
+/* media para 1024 */
+@media only screen and (max-width: 1024px) {
+  .contenedor-banner {
+    height: 450px;
+  }
+  .contenedor-banner .contenedor-banner_descripcion {
+    width: 45%;
+  }
+  .contenedor-banner .contenedor-banner_descripcion h3 {
+    font-size: xx-large;
+  }
+  .contenedor-banner .contenedor-banner_descripcion p {
+    font-size: large;
+  }
+  .contenedor-banner .contenedor-banner_descripcion a {
+    font-size: medium;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contenedor-banner {
+    height: 350px;
+  }
+  .contenedor-banner .contenedor-banner_descripcion {
+    width: 50%;
+  }
+  .contenedor-banner .contenedor-banner_descripcion h3 {
+    font-size: x-large;
+  }
+  .contenedor-banner .contenedor-banner_descripcion p {
+    font-size: medium;
+  }
+  .contenedor-banner .contenedor-banner_descripcion a {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .contenedor-banner {
+    background-size: 98%;
+    background-position: center top;
+  }
+  .contenedor-banner .contenedor-banner_descripcion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .contenedor-banner .contenedor-banner_descripcion h3 {
+    display: none;
+  }
+  .contenedor-banner .contenedor-banner_descripcion p {
+    display: none;
+  }
+  .contenedor-banner .contenedor-banner_descripcion a {
+    font-size: large;
+    margin: 3.5%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .contenedor-banner {
+    width: 300px;
+    background-size: 98%;
+    background-position: center top;
+  }
+  .contenedor-banner .contenedor-banner_descripcion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .contenedor-banner .contenedor-banner_descripcion h3 {
+    display: none;
+  }
+  .contenedor-banner .contenedor-banner_descripcion p {
+    display: none;
+  }
+  .contenedor-banner .contenedor-banner_descripcion a {
+    font-size: large;
+    margin: 3.5%;
+  }
+}
+/* proximos shows */
+.proximosShows {
+  width: 85vw;
+  margin: 3rem auto;
+}
+.proximosShows .proximosShows__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+.proximosShows .proximosShows__container .flyer {
+  width: 100%;
+  border-radius: 3%;
+  transition: 0.7s;
+}
+.proximosShows .proximosShows__container .flyer:hover {
+  transform: scale(0.98);
+  transition: 0.7s;
+}
+.proximosShows .proximosShows__container .shows {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 3rem auto;
+}
+.proximosShows .proximosShows__container .shows h3 {
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0 auto 4% auto;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.proximosShows .proximosShows__container .shows p {
+  color: rgba(0, 0, 0, 0.75);
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 50%;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 1024px) {
+  .proximosShows .proximosShows__container .shows h3 {
+    font-size: xx-large;
+  }
+  .proximosShows .proximosShows__container .shows p {
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .proximosShows .proximosShows__container .shows {
+    margin: auto;
+    width: 80%;
+  }
+  .proximosShows .proximosShows__container .shows h3 {
+    font-size: x-large;
+  }
+  .proximosShows .proximosShows__container .shows p {
+    font-size: medium;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .proximosShows .proximosShows__container {
+    flex-wrap: wrap-reverse;
+  }
+  .proximosShows .proximosShows__container .shows {
+    width: 100%;
+  }
+  .proximosShows .proximosShows__container .shows h3 {
+    font-size: x-large;
+  }
+  .proximosShows .proximosShows__container .shows p {
+    font-size: medium;
+    max-width: 70%;
+  }
+}
+/*agenda*/
+.contenedor-agenda {
+  display: flex;
+  width: 85vw;
+  margin: 9% auto;
+}
+.contenedor-agenda h2 {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 100px;
+}
+.contenedor-agenda .contenedor-agenda_fechas {
+  width: 100%;
+}
+.contenedor-agenda .contenedor-agenda_fechas ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+  height: 8%;
+  border-bottom: rgba(0, 0, 0, 0.55) solid 1px;
+  margin: 5% 0;
+}
+.contenedor-agenda .contenedor-agenda_fechas ul li {
+  font-family: "Anton", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: x-large;
+  width: 20%;
+}
+
+/* footer */
+footer .seguinos {
+  background-color: black;
+}
+footer .seguinos .menu_seguinos {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+footer .seguinos .menu_seguinos a {
+  display: inline-block;
+  font-size: 6rem;
+  color: white;
+  width: 100%;
+  transition: all 0.5s;
+}
+footer .seguinos .menu_seguinos a:hover {
+  color: #f2f2f2;
+  transform: scale(0.95);
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu_seguinos {
+    width: 95%;
+  }
+}
+/*shows.html*/
+.triptico {
+  width: 85vw;
+  height: 30vw;
+  margin: 5% auto;
+}
+.triptico .contenedor-img {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  /* por alguna razon no me permita anidar los class .img dentro del div q los contiene y al cual le aplique propiedades generales */
+}
+.triptico .contenedor-img div {
+  width: 32%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.triptico .contenedor-img .img1 {
+  background-image: url(imagenes/triptico1.jpeg);
+}
+.triptico .contenedor-img .img2 {
+  background-image: url(imagenes/triptico2.jpeg);
+}
+.triptico .contenedor-img .img3 {
+  background-image: url(imagenes/triptico3.jpeg);
+}
+.triptico .contenedor-texto {
+  position: relative;
+  top: -30%;
+  left: 8%;
+}
+.triptico .contenedor-texto h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+.triptico .contenedor-texto p {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.galeria {
+  width: 85vw;
+  height: 60vw;
+  margin: 5% auto;
+}
+.galeria .contenedor-galeria_1 {
+  display: flex;
+  height: 49%;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+.galeria .contenedor-galeria_1 div {
+  width: 31%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity, scale, 1s;
+}
+.galeria .contenedor-galeria_1 div p {
+  display: none;
+  color: black;
+  position: relative;
+  top: 45%;
+  left: 20%;
+}
+.galeria .contenedor-galeria_1 div:hover {
+  transform: scale(0.99);
+  opacity: 0.3;
+  transition: 0.5s;
+}
+.galeria .contenedor-galeria_1 div:hover p {
+  display: block;
+  opacity: 1;
+}
+.galeria .contenedor-galeria_1 .img1 {
+  background-image: url(imagenes/matanza1.jpg);
+}
+.galeria .contenedor-galeria_1 .img2 {
+  background-image: url(imagenes/matanza2.jpg);
+}
+.galeria .contenedor-galeria_1 .img3 {
+  background-image: url(imagenes/matanza3.jpg);
+}
+.galeria .contenedor-galeria_2 {
+  display: flex;
+  height: 49%;
+  justify-content: space-evenly;
+}
+.galeria .contenedor-galeria_2 div {
+  width: 31%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.galeria .contenedor-galeria_2 .img4 {
+  background-image: url(imagenes/matanza4.jpg);
+}
+.galeria .contenedor-galeria_2 .img5 {
+  background-image: url(imagenes/matanza5.jpg);
+}
+.galeria .contenedor-galeria_2 .img6 {
+  background-image: url(imagenes/matanza6.jpg);
+}
+
+/*musica.html*/
+.contenedor {
+  width: 85vw;
+  margin: 5% auto;
+}
+.contenedor .contenedor-musica {
+  margin: 8% auto;
+}
+.contenedor .contenedor-musica .imagen-descripcion {
+  display: flex;
+  height: 40vw;
+  margin: 1% auto;
+}
+.contenedor .contenedor-musica .imagen-descripcion .deepConurba-imagen {
+  width: 45%;
+  background-image: url(imagenes/imagen4.jpg);
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.contenedor .contenedor-musica .imagen-descripcion .deepConurba-texto {
+  width: 57%;
+  margin: auto;
+  text-align: center;
+}
+.contenedor .contenedor-musica .imagen-descripcion .deepConurba-texto h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  margin: auto 0 4% 0;
+}
+.contenedor .contenedor-musica .imagen-descripcion .deepConurba-texto p {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.75);
+}
+.contenedor .contenedor-musica .imagen-descripcion .deepConurba-texto a {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: xx-large;
+  margin: auto;
+  padding: 2%;
+}
+.contenedor .contenedor-musica .imagen-descripcion .contraTodoPronostico-imagen {
+  width: 45%;
+  background-image: url(imagenes/imagen1.jpg);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.contenedor .contenedor-musica .imagen-descripcion .contraTodoPronostico-texto {
+  width: 57%;
+  margin: auto;
+  text-align: center;
+}
+.contenedor .contenedor-musica .imagen-descripcion .contraTodoPronostico-texto h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.75);
+  margin: auto 0 4% 0;
+}
+.contenedor .contenedor-musica .imagen-descripcion .contraTodoPronostico-texto p {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.75);
+}
+.contenedor .contenedor-musica .imagen-descripcion .contraTodoPronostico-texto a {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: xx-large;
+  margin: auto;
+  padding: 2%;
+}
+
+/* aca gil*/
+@media only screen and (max-width: 769px) {
+  .deepConurba-texto h2 {
+    font-size: small;
+  }
+}
+/*redes*/
+.ContenedorTarjetas {
+  width: 85vw;
+  margin: 10% auto;
+  display: flex;
+  justify-content: space-around;
+}
+.ContenedorTarjetas .card {
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.29);
+}
+.ContenedorTarjetas .card .card-body {
+  text-align: center;
+}
+.ContenedorTarjetas .card .card-body h4 {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.75);
+}
+.ContenedorTarjetas .card .card-body p {
+  font-family: "Anton", sans-serif;
+  font-size: large;
+  color: rgba(0, 0, 0, 0.75);
+}
+.ContenedorTarjetas .card .card-body .btn {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid rgba(0, 0, 0, 0.75) 2px;
+  border-radius: 0%;
+  padding: 0 1%;
+  transition: 0.7s;
+}
+.ContenedorTarjetas .card .card-body .btn:hover {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 0.7s;
+}
+
+@media only screen and (max-width: 768px) {
+  .ContenedorTarjetas {
+    justify-content: space-between;
+  }
+  .ContenedorTarjetas .card .card-img-top {
+    width: 85%;
+    margin: auto;
+  }
+  .ContenedorTarjetas .card .card-body {
+    text-align: center;
+  }
+  .ContenedorTarjetas .card .card-body h4 {
+    font-size: large;
+  }
+  .ContenedorTarjetas .card .card-body p {
+    font-size: small;
+  }
+  .ContenedorTarjetas .card .card-body .btn {
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .ContenedorTarjetas .card .card-img-top {
+    width: 75%;
+  }
+  .ContenedorTarjetas .card .card-body {
+    text-align: center;
+  }
+  .ContenedorTarjetas .card .card-body h4 {
+    font-size: large;
+  }
+  .ContenedorTarjetas .card .card-body p {
+    font-size: small;
+  }
+  .ContenedorTarjetas .card .card-body .btn {
+    font-size: medium;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .ContenedorTarjetas .card .card-img-top {
+    width: 65%;
+  }
+  .ContenedorTarjetas .card .card-body {
+    text-align: center;
+  }
+  .ContenedorTarjetas .card .card-body h4 {
+    font-size: medium;
+  }
+  .ContenedorTarjetas .card .card-body p {
+    font-size: x-small;
+  }
+  .ContenedorTarjetas .card .card-body .btn {
+    font-size: small;
+  }
+}
+/*contacto*/
+.formcontainer {
+  width: 85vw;
+  height: 60vw;
+  margin: 10% auto;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.29);
+}
+.formcontainer h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  margin-top: 2%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.75);
+}
+.formcontainer .formulario {
+  text-align: center;
+}
+.formcontainer .formulario .form__label {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.75);
+  width: 70%;
+  margin: 5% auto 0;
+  text-align: left;
+}
+.formcontainer .formulario .form__input, .formcontainer .formulario .form__textArea {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+}
+.formcontainer .formulario .form__enviar--submit {
+  font-family: "Anton", sans-serif;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid rgba(0, 0, 0, 0.75) 2px;
+  padding: 0 1%;
+  transform: all;
+  transition: 0.7s;
+  margin-top: 5%;
+}
+.formcontainer .formulario .form__enviar--submit:hover {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 0.7s;
+}
+
+@media only screen and (max-width: 1024px) {
+  .formcontainer .formulario .form__label {
+    margin: 4% auto 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .formcontainer h2 {
+    font-size: xx-large;
+  }
+  .formcontainer .formulario {
+    /* por alguna razon no me permite aplicar las propiedades al al submit si lo anido dentro del label q lo contiene */
+  }
+  .formcontainer .formulario .form__label {
+    font-size: large;
+    margin: 3% auto 0;
+  }
+  .formcontainer .formulario .form__enviar--submit {
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .formcontainer {
+    height: 85vw;
+  }
+  .formcontainer h2 {
+    font-size: x-large;
+  }
+  .formcontainer .formulario .form__label {
+    font-size: small;
+    margin: 3% auto 0;
+  }
+  .formcontainer .formulario .form__enviar--submit {
+    font-size: large;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */
